@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CrackTheHack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/in.png" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144098545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144098545-1');
+    </script>
+</head>
+<body>
+    <!-- Progress-wrapp scroll-button -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /> </svg>
+    </div>
+    <!-- Main -->
+    <div class="annie-page"> 
+       <a href="#" class="js-annie-nav-toggle annie-nav-toggle"><i></i></a>
+        <!-- Sidebar -->
+        <aside class="annie-aside">
+            <!-- Logo -->
+            <div class="annie-logo">
+                <a href="index.html"><img src="images/icon.jpg" style="border-radius: 100%" id="logo"></a>
+                <h1><a href="index.html">CrackTheHack</a></h1> 
+            </div>
+            <!-- Menu -->
+            <nav class="annie-main-menu">
+                <ul>
+                    <li class="annie-sub"><a href="#0" style="text-shadow: 2px 1px 2px red;font-size: 20px">PortSwigger-Solution</a>
+                        <ul>
+                             <li><a href="sql.html">01. SQL injection</a></li>
+                            <li><a href="Cross-site-scripting.html">02. Cross-site scripting</a></li>
+                            <li><a href="CSRF.html">03. Cross-site request forgery (CSRF)</a></li>
+                            <li><a href="Clickjacking.html">04. Clickjacking</a></li>
+                            <li><a href="DOM-based-vulnerabilities.html">05. DOM-based vulnerabilities</a></li>
+                            <li><a href="Cross-origin-resource-sharing.html">06. Cross-origin resource sharing (CORS)</a></li>
+                            <li><a href="xxe.html">07. XML external entity (XXE) injection</a></li>
+                            <li><a href="ssrf.html">08. Server-side request forgery (SSRF)</a></li>
+                           <li><a href="HTTP-request-smuggling.html">09. HTTP request smuggling</a></li>
+                            <li><a href="OS-command-injection.html">10. OS command injection</a></li>
+                            <li><a href="Server-side_template-injection.html">11. Server-side template injection</a></li>
+                            <li><a href="Directory-traversal.html">12. Directory traversal</a></li>
+                            <li><a href="Access-control-vulnerabilities.html">13. Access control vulnerabilities</a></li>
+                            <li><a href="Authentication.html">14. Authentication</a></li>
+                            <li><a href="WebSockets.html">15. WebSockets</a></li>
+                            <li><a href="Web-cache-poisoning.html">16. Web cache poisoning</a></li>
+                            <li><a href="Insecure-deserialization.html">17. Insecure deserialization</a></li>
+                            <li><a href="Information-disclosure.html">18. Information disclosure</a></li>
+                            <li><a href="Business-logic-vulnerabilities.html">19. Business logic vulnerabilities</a></li>
+                            <li><a href="HTTP-Host-header-attacks.html">20. HTTP Host header attacks</a></li>
+                            <li><a href="OAuth-authentication.html">21. OAuth authentication</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Sidebar Footer -->
+            <div class="annie-footer">
+               <ul>
+                    <li><a href="https://www.instagram.com/utkarsh_.singh.__" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/UtkarshSinghUK" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://linkedin.com/in/utkarsh-singh-42b8471a4" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCo7l8n1fUzZOnuZx3d5AMJw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://github.com/CrackTheHack" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+                <p><small><a href="https://crackthehack.cf/Privacy%20Policy/copy.html" target="_blank">&copy; 2021 Design by Utkarsh Sign</a></small></p>
+            </div>
+        </aside>
+        <!-- Content -->
+        <div class="annie-main">         
+                    <div class="row">
+                        <div class="col-md-12 text-center mt-60"> <span class="heading-meta" style="font-size: 20px">Cross-origin resource sharing (CORS)</span>
+                            <h2 class="annie-heading animate-box" data-animate-effect="fadeInUp">Solution</h2> 
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch annie-photos mb-30" id="annie-section-photos">
+                        <div class="col-12">
+                            <div class="row align-items-stretch">
+                                <!-- YouTube Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=AQ6qPmlWM0E">
+                                        <img class="img-fluid" src="images/you.png" style="border-radius: 15px">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">01. CORS vulnerability with basic origin reflection</span>
+                                </div>
+                                <!-- Vimeo Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=K9ilWb8KzK4">
+                                        <img class="img-fluid" src="images/you.png" style="border-radius: 15px">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">02. CORS vulnerability with trusted null origin</span><br><br><br><br>
+                                </div>
+                                <!-- Custom Video Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=FwlPRvZUUZk">
+                                        <img class="img-fluid" src="images/you.png" style="height:auto">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">03. CORS vulnerability with trusted insecure protocols</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=QKeg3rY6e2s">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">04. CORS vulnerability with internal network pivot attack</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/sticky-kit.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+</html>

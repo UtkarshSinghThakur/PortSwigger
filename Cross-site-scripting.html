@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CrackTheHack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/in.png" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144098545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144098545-1');
+    </script>
+</head>
+<body>
+    <!-- Progress-wrapp scroll-button -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /> </svg>
+    </div>
+    <!-- Main -->
+    <div class="annie-page"> 
+       <a href="#" class="js-annie-nav-toggle annie-nav-toggle"><i></i></a>
+        <!-- Sidebar -->
+        <aside class="annie-aside">
+            <!-- Logo -->
+            <div class="annie-logo">
+                <a href="index.html"><img src="images/icon.jpg" style="border-radius: 100%" id="logo"></a>
+                <h1><a href="index.html">CrackTheHack</a></h1> 
+            </div>
+            <!-- Menu -->
+            <nav class="annie-main-menu">
+                <ul>
+                    <li class="annie-sub"><a href="#0" style="text-shadow: 2px 1px 2px red;font-size: 20px">PortSwigger-Solution</a>
+                        <ul>
+                             <li><a href="sql.html">0.1 SQL injection</a></li>
+                            <li><a href="Cross-site-scripting.html">0.2 Cross-site scripting</a></li>
+                            <li><a href="CSRF.html">03. Cross-site request forgery (CSRF)</a></li>
+                            <li><a href="Clickjacking.html">0.4 Clickjacking</a></li>
+                            <li><a href="DOM-based-vulnerabilities.html">05. DOM-based vulnerabilities</a></li>
+                            <li><a href="Cross-origin-resource-sharing.html">06. Cross-origin resource sharing (CORS)</a></li>
+                            <li><a href="xxe.html">07. XML external entity (XXE) injection</a></li>
+                            <li><a href="ssrf.html">08. Server-side request forgery (SSRF)</a></li>
+                           <li><a href="HTTP-request-smuggling.html">09. HTTP request smuggling</a></li>
+                            <li><a href="OS-command-injection.html">10. OS command injection</a></li>
+                            <li><a href="Server-side_template-injection.html">11. Server-side template injection</a></li>
+                            <li><a href="Directory-traversal.html">12. Directory traversal</a></li>
+                            <li><a href="Access-control-vulnerabilities.html">13. Access control vulnerabilities</a></li>
+                            <li><a href="Authentication.html">14. Authentication</a></li>
+                            <li><a href="WebSockets.html">15. WebSockets</a></li>
+                            <li><a href="Web-cache-poisoning.html">16. Web cache poisoning</a></li>
+                            <li><a href="Insecure-deserialization.html">17. Insecure deserialization</a></li>
+                            <li><a href="Information-disclosure.html">18. Information disclosure</a></li>
+                            <li><a href="Business-logic-vulnerabilities.html">19. Business logic vulnerabilities</a></li>
+                            <li><a href="HTTP-Host-header-attacks.html">20. HTTP Host header attacks</a></li>
+                            <li><a href="OAuth-authentication.html">21. OAuth authentication</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Sidebar Footer -->
+            <div class="annie-footer">
+               <ul>
+                    <li><a href="https://www.instagram.com/utkarsh_.singh.__" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/UtkarshSinghUK" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://linkedin.com/in/utkarsh-singh-42b8471a4" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCo7l8n1fUzZOnuZx3d5AMJw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://github.com/CrackTheHack" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+                <p><small><a href="https://crackthehack.cf/Privacy%20Policy/copy.html" target="_blank">&copy; 2021 Design by Utkarsh Sign</a></small></p>
+            </div>
+        </aside>
+        <!-- Content -->
+        <div class="annie-main">         
+                    <div class="row">
+                        <div class="col-md-12 text-center mt-60"> <span class="heading-meta" style="font-size: 20px">Cross-site scripting</span>
+                            <h2 class="annie-heading animate-box" data-animate-effect="fadeInUp">Solution</h2> 
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch annie-photos mb-30" id="annie-section-photos">
+                        <div class="col-12">
+                            <div class="row align-items-stretch">
+                                <!-- YouTube Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=Y_oby-UVzsM">
+                                        <img class="img-fluid" src="images/you.png" style="border-radius: 15px">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">01. Reflected XSS into HTML context with nothing encoded</span>
+                                </div>
+                                <!-- Vimeo Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=eIRRPqG-Gpo">
+                                        <img class="img-fluid" src="images/you.png" style="border-radius: 15px">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">02. Reflected XSS into HTML context with most tags and attributes blocked</span><br><br><br><br>
+                                </div>
+                                <!-- Custom Video Popup -->
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=h8zMOcqAZIg">
+                                        <img class="img-fluid" src="images/you.png" style="height:auto">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">03. Reflected XSS into HTML context with all tags blocked except custom ones</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=bmFyjZpvLa0">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">04. Reflected XSS with event handlers and href attributes blocked</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=ZpRtqYXYlzg">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">05. Reflected XSS with some SVG markup allowed</span><br><br><br><br>
+                                </div>
+                               <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=D5ZJcm6I8ng">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">06. Reflected XSS into attribute with angle brackets HTML-encoded</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=XEmRbWR4wCI">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color:white">07. Stored XSS into anchor href attribute with double quotes HTML-encoded</span><br><br><br><br>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=ibH8QSkWgmA">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">08. Reflected XSS in canonical link tag</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=cJFm3PhJ7aQ">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">09. Reflected XSS into a JavaScript string with single quote and backslash escaped</span><br><br><br><br>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=laa2XkmV_7c">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">10. Reflected XSS into a JavaScript string with angle brackets HTML encoded</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=tPL-Vvfmplc">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">11. Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped</span><br><br><br><br>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=IE3cgnORmyk">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">12. Reflected XSS in a JavaScript URL with some characters blocked</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=Lo417HgSLDI">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">13. Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped</span><br><br><br><br>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=PpSMFMefJ7M">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color:white">14. Reflected XSS with AngularJS sandbox escape without strings</span><br><br><br>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=K6gIl9Ru_Pw">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">15. Reflected XSS with AngularJS sandbox escape and CSP</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=FcNOd3_quZQ">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">16. Stored XSS into HTML context with nothing encoded</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=FdyZ8H7HyD8">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">17. DOM XSS in document.write sink using source location.search</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=_xmOuYclSro">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">18. DOM XSS in document.write sink using source location.search inside a select element</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=cIpAM-LAiMk">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">19. DOM XSS in innerHTML sink using source location.search</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=QQtaQDjgxIs">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">20. DOM XSS in jQuery anchor href attribute sink using location.search source</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=v59A1p__JV0">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">21. DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=jqMSZV0_OvI">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">22. Reflected DOM XSS</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=GXBK7BusfG8">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">23. Stored DOM XSS</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=_1LYQ0drjTE">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">24. Exploiting cross-site scripting to steal cookies</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=Q9Df8W8WcTg">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">25. Exploiting cross-site scripting to capture passwords</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=Fx-t4q7ild0">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">26. Reflected XSS protected by CSP, with dangling markup attack</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=kFQgy8LF2a8">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">27. Reflected XSS protected by very strict CSP, with dangling markup attack</span>
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=1yV67Ilp--w">
+                                        <img class="img-fluid" src="images/you.png">
+                                    </a>
+                                     <span style="font-family: cursive;font-size: 15px;color: white">28. Reflected XSS protected by CSP, with CSP bypass</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/sticky-kit.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+</html>
